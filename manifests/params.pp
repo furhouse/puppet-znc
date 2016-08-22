@@ -37,11 +37,11 @@ class znc::params {
       $zc_suffix = 'debian'
       $zc_packages = [ 'znc', 'znc-tcl', 'znc-perl' ]
       case $::operatingsystemmajrelease {
-        8: {
+        8,16.04: {
           $systemd = true
         }
         default: {
-          $systemd = true
+          $systemd = false
         }
       }
     }
